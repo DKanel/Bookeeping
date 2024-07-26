@@ -6,13 +6,25 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
+
 
 struct BooksCell: View {
+    @State var bookTitle: String
+    @State var bookImage: String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            WebImage(url: URL(string: bookImage))
+                .resizable()
+                .scaledToFit()
+                .frame(width: 200, height: 200)
+            Text($bookTitle.wrappedValue)
+        }
+        .frame(width: 300)
     }
 }
 
 #Preview {
-    BooksCell()
+    BooksCell(bookTitle: "AAA", bookImage: "AAA")
 }
+

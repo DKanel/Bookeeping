@@ -13,7 +13,7 @@ struct BookeepingApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(textInput: "")
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

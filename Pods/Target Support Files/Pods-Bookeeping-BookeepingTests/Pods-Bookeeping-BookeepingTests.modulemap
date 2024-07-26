@@ -1,0 +1,6 @@
+framework module Pods_Bookeeping_BookeepingTests {
+  umbrella header "Pods-Bookeeping-BookeepingTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
